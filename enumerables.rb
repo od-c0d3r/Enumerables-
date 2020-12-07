@@ -1,22 +1,24 @@
+# frozen_string_literal: true
+
 ### ### ### ### ### ### ### ### ### ### ###
 #        Ruby         #         By        #
 #      Project 2      #     @wandji20     #
 #     Enumerables     #     @od-c0d3r     #
 ###  ###  ####  ### ### ### ### ### ### ###
 
-# rubocop:disable Metrics/ModuleLength,Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity,Metrics/MethodLength
+# rubocop:disable Metrics/ModuleLength,Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/AbcSize
 module Enumerable
   # my_each()
-  def my_each()
+  def my_each
     return to_enum(:my_each) unless block_given?
 
-    for item in self do
+    each do |item|
       yield item if block_given?
     end
   end
 
   # my_each_with_index()
-  def my_each_with_index()
+  def my_each_with_index
     return to_enum(:my_each_with_index) unless block_given?
 
     index = 0
@@ -27,7 +29,7 @@ module Enumerable
   end
 
   # my_select
-  def my_select()
+  def my_select
     return to_enum(:my_select) unless block_given?
 
     new_arr = []
@@ -172,7 +174,7 @@ def multiply_els(array)
   array.my_inject(:*)
 end
 
-# rubocop:enable Metrics/ModuleLength,Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity,Metrics/MethodLength
+# rubocop:enable Metrics/ModuleLength,Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/AbcSize
 
 ### ### ### ### ###
 #                 #
@@ -192,7 +194,7 @@ end
 # [1,2,3].my_each_with_index{ |ele, index| puts ele if index.even? }
 
 # puts '3.--------my_select--------'
-#puts (%w[Sharon Leo Leila Brian Arun].my_select { |friend| friend != 'Brian' })
+# puts (%w[Sharon Leo Leila Brian Arun].my_select { |friend| friend != 'Brian' })
 
 # puts '4.--------my_all--------'
 # puts (%w[ant bear cat].my_all? { |word| word.length >= 3 }) #=> true
