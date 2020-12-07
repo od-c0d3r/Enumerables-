@@ -1,8 +1,8 @@
 [](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Week 5
+## Week 5 
 
-# Project 2 - Ruby : Enumerables
+# Project 2 - Ruby : Enumerables with RSpec
 
 ## Screen Shot
 
@@ -19,6 +19,7 @@ You can find the original project specification at: https://github.com/TheOdinPr
 ## Built With
 
 - Ruby
+- RSpec
 
 ## Live Demo from Repl.it
 
@@ -36,13 +37,18 @@ Follow these steps to get a local copy up and running :
 
 ## Authors
 
-**Wandji Bertrand**
+## Rayan Rassam
+* Github:[ @Rayan84](https://github.com/Rayan84)
+* Twitter:[ @Rayan65096267](https://twitter.com/Rayan65096267)
+* LinkedIn:[ @rayan rassam](https://www.linkedin.com/in/rayan-rassam-18a0a426/)
 
-- GitHub: [@wandji20](https://github.com/wandji20)
 
-**Omar Rashad**
+## Omar Rashad
 
-- GitHub: [@od-c0d3r](https://github.com/od-c0d3r)
+* GitHub: [ @od-c0d3r](https://github.com/od-c0d3r)
+* Twitter:[ @od_coder](https://twitter.com/od_coder)
+* LinkedIn:[ @omarrashad](https://www.linkedin.com/in/omarrashad/)
+
 
 ## Contributing
 
