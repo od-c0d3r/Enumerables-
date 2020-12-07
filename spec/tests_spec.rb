@@ -46,7 +46,13 @@ end
 
 describe '#my_map' do
   it 'Returns a new array with the result of running a give block once every element in the array' do
-    exepct(test_array.my_map { |ele| ele.odd?}).to eql(test_array.map { |ele| ele.odd?})
+    expect(test_array.my_map { |ele| ele.odd?}).to eql(test_array.map { |ele| ele.odd?})
+  end
+end 
+
+describe '#my_inject' do
+  it 'Combines all elements of an array by applying a binary operation, specified by a block or a symbol that names a method or operator.' do
+    expect(test_array.my_inject { |sum, n| sum + n } ).to eql(test_array.inject { |sum, n| sum + n } )
   end
 end 
 

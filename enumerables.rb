@@ -10,7 +10,7 @@ module Enumerable
   def my_each()
     return to_enum(:my_each) unless block_given?
 
-    each do |item|
+    for item in self do
       yield item if block_given?
     end
   end
@@ -195,8 +195,8 @@ end
 #puts (%w[Sharon Leo Leila Brian Arun].my_select { |friend| friend != 'Brian' })
 
 # puts '4.--------my_all--------'
- puts (%w[ant bear cat].my_all? { |word| word.length >= 3 }) #=> true
- puts (%w[ant bear cat].my_all? { |word| word.length >= 4 }) #=> false
+# puts (%w[ant bear cat].my_all? { |word| word.length >= 3 }) #=> true
+# puts (%w[ant bear cat].my_all? { |word| word.length >= 4 }) #=> false
 # puts %w[ant bear cat].my_all?(/t/) #=> false
 # puts [1, 2i, 3.14].my_all?(Numeric) #=> true
 # puts [].my_all? #=> true
@@ -227,14 +227,19 @@ end
 
 # puts '8.--------my_maps--------'
 # my_order = ['medium Big Mac', 'medium fries', 'medium milkshake']
-# puts (my_order.my_map { |item| item.gsub('medium', 'extra large') })
-# puts ((0..5).my_map { |i| i * i })
+# # puts (my_order.my_map { |item| item.gsub('medium', 'extra large') })
+
+#  puts ((0..5).my_map { |ele| ele.odd?})
+#  puts "----------"
+#  puts ((0..5).map { |ele| ele.odd?})
+
 # puts 'my_map_proc'
 # my_proc = proc { |i| i * i }
 # puts (1..5).my_map(my_proc) { |i| i + i }
 
 # puts '8.--------my_inject--------'
-# puts ((1..5).my_inject { |sum, n| sum + n }) #=> 15
+#  puts ((1..5).my_inject { |sum, n| sum + n }) #=> 15
+#  puts ((1..5).inject { |sum, n| sum + n }) #=> 15
 # puts (1..5).my_inject(1) { |product, n| product * n } #=> 120
 # longest = %w[ant bear cat].my_inject do |memo, word|
 #    memo.length > word.length ? memo : word
