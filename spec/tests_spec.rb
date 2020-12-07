@@ -10,7 +10,7 @@ describe Enumerable do
 
   describe '#my_each_with_index()' do
     it 'Calls the given block once for each element in self with its index' do
-      expect(test_array.my_each_with_index { |ele, index|puts ele if index.even? }).to eql(test_array.each_with_index do |ele, index|puts ele if index.even?end)
+      expect(test_array.my_each_with_index { |ele, index|puts ele if index.even? }).to eql(test_array.each_with_index { |ele, index|puts ele if index.even? })
     end
   end
 
@@ -25,5 +25,29 @@ describe Enumerable do
       expect(test_array.my_all?{ |ele| ele > 100 }).to eql(test_array.all? { |ele| ele > 100 })
     end
   end
+
+  describe '#my_any?()' do
+    it 'Returns true if any of the elements in an array pass the given block' do
+      expect(test_array.my_any?{ |ele| ele == 2}).to eql(test_array.any? { |ele| ele == 2})
+    end
+  end
+
+  describe '#my_none?' do
+    it 'Returns true if none of the elements of an array pass the given block' do
+      expect(test_array.my_none? { |ele| ele == 1}).to eql(test_array.none? { |ele| ele == 1})
+    end
+  end
+
+  describe '#my_count' do
+    it 'Returns the total number of elements of an array that pass the give block' do
+      expect(test_array.my_count { |ele| ele.even?}).to eql(test_array.count { |ele| ele.even? })
+  end
+end
+
+describe '#my_map' do
+  it 'Returns a new array with the result of running a give block once every element in the array' do
+    exepct(test_array.my_map { |ele| ele.odd?}).to eql(test_array.map { |ele| ele.odd?})
+  end
+end 
 
 end
