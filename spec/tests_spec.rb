@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-# rubocop:disable Metrics/BlockLength,Layout/LineLength
+# rubocop:disable Layout/LineLength
 
 require './enumerables'
 
@@ -65,4 +63,4 @@ describe Enumerable do
   end
 end
 
-# rubocop:enable Metrics/BlockLength,Layout/LineLength
+# rubocop:enable Layout/LineLength
